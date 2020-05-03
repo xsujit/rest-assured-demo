@@ -1,0 +1,113 @@
+{
+  "mappings": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/test"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "jsonBody": {
+          "productName": "Corn flakes",
+          "processIdentifier": "1212454588",
+          "parameters": {
+            "productLine": "FMCG",
+            "popularity": "Good",
+            "producers": {
+              "Kellogg": {
+                "stock": true,
+                "additionalInfo": "abc-01"
+              },
+              "Nestle": {
+                "stock": false,
+                "additionalInfo": "xy-01,cr-01"
+              }
+            },
+            "Grains": [
+              {
+                "attribute": "Organic available",
+                "value": true
+              },
+              {
+                "attribute": "Non organic available",
+                "value": true
+              }
+            ],
+            "Preservatives": [
+              {
+                "attribute": "Preservative A",
+                "value": true
+              },
+              {
+                "attribute": "Preservative B",
+                "value": false
+              }
+            ],
+            "suitability": [
+              {
+                "attribute": "For kids",
+                "value": true
+              },
+              {
+                "attribute": "For above 60",
+                "value": false
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/schema"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "jsonBody": [
+          {
+            "id": 9851386.910590396,
+            "name": "sit deserunt incididunt in non",
+            "price": 5421808.438944714,
+            "tags": [
+              "Lorem laborum occaecat dolor ut",
+              "laborum ut",
+              "pariatur id dolore occaecat nulla",
+              "occaecat enim aute"
+            ],
+            "dimensions": {
+              "length": 89527935.28259057,
+              "width": -66127266.27286014,
+              "height": 98098241.6901165
+            },
+            "warehouseLocation": {
+              "description": "Coordinates of the warehouse with the product"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "method": "POST",
+        "url": "/send"
+      },
+      "response": {
+        "status": 200,
+        "jsonBody": {
+          "status": "Salary",
+          "message": "Between £30,000 and £60,000"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    }
+  ]
+}
